@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: survivor-marker
+  namespace: default
+data:
+  role: survivor

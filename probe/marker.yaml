@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: probe-marker
+  namespace: default
+data:
+  role: probe
