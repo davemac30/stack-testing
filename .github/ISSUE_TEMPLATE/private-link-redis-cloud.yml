@@ -44,13 +44,13 @@ body:
       required: true
 
   - type: input
-    id: consumer-vpcs
+    id: consumer-vpc-name
     attributes:
-      label: Consumer VPC name(s) or ID(s)
-      description: List every VPC that needs an endpoint.
-      placeholder: e.g. tools, ci, vpc-0123456789abcdef0
+      label: Consumer VPC name
+      description: The name of the one consumer VPC that needs an endpoint. Optional; defaults to hosting.
+      value: hosting
     validations:
-      required: true
+      required: false
 
   - type: input
     id: subscription-name
@@ -138,13 +138,25 @@ body:
 
         ### Operator details (completed by the assigned engineer)
 
-        Requesting teams: leave this section blank. The assigned engineer adds the subnet IDs after picking up the request.
+        Requesting teams: leave this section blank. The assigned engineer adds the VPC ID and subnet IDs after picking up the request.
 
   - type: input
+    id: consumer-vpc-id
+    attributes:
+      label: Consumer VPC ID
+      description: The ID of the consumer VPC, for example vpc-0123456789abcdef0. Optional.
+      placeholder: vpc-0123456789abcdef0
+    validations:
+      required: false
+
+  - type: textarea
     id: consumer-subnet-ids
     attributes:
-      label: Consumer subnet ID
-      description: "Look up the subnet ID in the consumer VPC that will hold the endpoint, in the form subnet-0123456789abcdef0."
-      placeholder: subnet-0123456789abcdef0
+      label: Consumer subnet ID(s)
+      description: "Look up the subnet IDs in the consumer VPC that will hold the endpoint, one per line, in the form subnet-0123456789abcdef0. Each VPC has three servicenet subnets across zones."
+      placeholder: |
+        subnet-0123456789abcdef0
+        subnet-0123456789abcdef1
+        subnet-0123456789abcdef2
     validations:
       required: false
