@@ -1,0 +1,112 @@
+name: "PrivateLink: OpenSearch Serverless"
+description: Create a VPC endpoint for an OpenSearch Serverless collection
+title: "PrivateLink: OpenSearch Serverless: "
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read the [PrivateLink Guide for Requesting Teams](https://github.com/NBCUDTC/gtvd-cloud-engineering/blob/master/docs/internal/howto/aws/private-link-requesting-team-guide.md) before completing this form.
+
+  - type: input
+    id: requesting-team
+    attributes:
+      label: Requesting team
+    validations:
+      required: true
+
+  - type: input
+    id: consumer-account-name
+    attributes:
+      label: Consumer AWS account name
+      description: The friendly name of the account where the endpoint will be created.
+    validations:
+      required: true
+
+  - type: input
+    id: consumer-account-id
+    attributes:
+      label: Consumer AWS account ID
+      description: The 12-digit AWS account ID where the endpoint will be created.
+      placeholder: "123456789012"
+    validations:
+      required: true
+
+  - type: input
+    id: consumer-vpc
+    attributes:
+      label: Consumer VPC name or ID
+      description: The VPC where the OpenSearch Serverless endpoint will be created.
+      placeholder: e.g. tools, vpc-0123456789abcdef0
+    validations:
+      required: true
+
+  - type: input
+    id: consumer-region
+    attributes:
+      label: AWS region
+      placeholder: e.g. us-east-2
+    validations:
+      required: true
+
+  - type: textarea
+    id: collection
+    attributes:
+      label: OpenSearch Serverless collection name / ARN
+      description: Provide the collection name and ARN when available.
+    validations:
+      required: true
+
+  - type: textarea
+    id: timing
+    attributes:
+      label: Target date or timing constraint
+      description: Explain when this is needed and why. If there is no fixed date, say so and provide prioritisation context.
+    validations:
+      required: true
+
+  - type: textarea
+    id: business-justification
+    attributes:
+      label: Business justification / desired outcome
+      description: Explain the value, risk reduction, customer benefit, or operational outcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add diagrams, related issues, or other useful information.
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Work Intake reference (optional)
+
+        A Work Intake reference is not required to raise this issue. After review, one may be requested if the amount of effort warrants it.
+
+  - type: input
+    id: work-intake-reference
+    attributes:
+      label: Work Intake reference
+      description: Add the link or ID if one already exists.
+      placeholder: Optional
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        For the assigned engineer: fill in the subnet IDs below, or leave them blank when raising the request.
+
+  - type: textarea
+    id: consumer-subnet-ids
+    attributes:
+      label: Consumer subnet ID(s)
+      description: "Look up the subnet IDs in the consumer VPC that will hold the endpoint, one per line, in the form subnet-0123456789abcdef0."
+      placeholder: |
+        subnet-0123456789abcdef0
+        subnet-0123456789abcdef1
+    validations:
+      required: false
