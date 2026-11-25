@@ -13,7 +13,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Requester details
+        ### Requester details
 
         Complete this section when raising the request.
 
@@ -128,7 +128,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Work Intake reference (optional)
+        ### Work Intake reference (optional)
 
         A Work Intake reference is not required to raise this issue. After review, one may be requested if the amount of effort warrants it.
 
@@ -144,17 +144,15 @@ body:
       value: |
         ---
 
-        ## Operator details (completed by the assigned engineer)
+        ### Operator details (completed by the assigned engineer)
 
         Requesting teams: leave this section blank. The assigned engineer adds the subnet IDs after picking up the request.
 
-  - type: textarea
+  - type: input
     id: consumer-subnet-ids
     attributes:
-      label: Consumer subnet ID(s)
-      description: "Look up the subnet IDs in the consumer VPC that will hold the endpoint, one per line, in the form subnet-0123456789abcdef0."
-      placeholder: |
-        subnet-0123456789abcdef0
-        subnet-0123456789abcdef1
+      label: Consumer subnet ID
+      description: "Look up the subnet ID in the consumer VPC that will hold the endpoint, in the form subnet-0123456789abcdef0."
+      placeholder: subnet-0123456789abcdef0
     validations:
       required: false
