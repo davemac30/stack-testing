@@ -23,6 +23,7 @@ body:
     id: requesting-team
     attributes:
       label: Requesting team
+      description: The team raising this request.
     validations:
       required: true
 
@@ -47,6 +48,7 @@ body:
     id: resource-region
     attributes:
       label: Resource AWS region
+      description: The AWS region that contains the resource.
       placeholder: e.g. eu-central-1
     validations:
       required: true
@@ -81,6 +83,7 @@ body:
     id: consumer-region
     attributes:
       label: Consumer AWS region
+      description: The AWS region that contains the consumer VPC where the endpoint will be created.
       placeholder: e.g. us-east-2
     validations:
       required: true
@@ -98,6 +101,7 @@ body:
     id: resource-type
     attributes:
       label: Resource type
+      description: The kind of resource being shared, for example an RDS cluster, an ElastiCache cluster, or an on-premises service.
       placeholder: e.g. RDS cluster, ElastiCache cluster, on-premises service
     validations:
       required: true
@@ -115,6 +119,7 @@ body:
     id: ports
     attributes:
       label: Resource port(s)
+      description: Every port the resource listens on, for example 5432, 6379.
       placeholder: e.g. 5432, 6379
     validations:
       required: true

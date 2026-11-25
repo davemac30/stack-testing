@@ -21,6 +21,7 @@ body:
     id: requesting-team
     attributes:
       label: Requesting team
+      description: The team raising this request.
     validations:
       required: true
 
@@ -45,6 +46,7 @@ body:
     id: consumer-region
     attributes:
       label: AWS region
+      description: The AWS region that contains the consumer VPC where the endpoint will be created.
       placeholder: e.g. us-east-2
     validations:
       required: true

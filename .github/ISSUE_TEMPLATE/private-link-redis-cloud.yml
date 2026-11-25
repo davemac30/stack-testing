@@ -23,6 +23,7 @@ body:
     id: requesting-team
     attributes:
       label: Requesting team
+      description: The team raising this request.
     validations:
       required: true
 
@@ -56,6 +57,7 @@ body:
     id: subscription-name
     attributes:
       label: Redis Cloud subscription name
+      description: The Redis Cloud subscription name, for example redis-sub-3254164.
       placeholder: e.g. redis-sub-3254164
     validations:
       required: true
@@ -72,6 +74,7 @@ body:
     id: ram-share-arn
     attributes:
       label: AWS RAM share ARN
+      description: The ARN of the AWS RAM resource share that Redis Cloud created for this subscription.
       placeholder: arn:aws:ram:region:account-id:resource-share/resource-id
     validations:
       required: true
@@ -80,6 +83,7 @@ body:
     id: resource-configuration-arn
     attributes:
       label: VPC Lattice resource configuration ARN
+      description: The ARN of the VPC Lattice resource configuration that Redis Cloud shares for this subscription.
       placeholder: arn:aws:vpc-lattice:region:account-id:resourceconfiguration/resource-id
     validations:
       required: true

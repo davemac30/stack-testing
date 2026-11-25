@@ -23,6 +23,7 @@ body:
     id: requesting-team
     attributes:
       label: Requesting team
+      description: The team raising this request.
     validations:
       required: true
 
@@ -82,6 +83,7 @@ body:
     id: service-name
     attributes:
       label: VPC Endpoint Service name
+      description: The full name of the VPC Endpoint Service, in the form com.amazonaws.vpce.us-east-2.vpce-svc-0123456789abcdef0.
       placeholder: com.amazonaws.vpce.us-east-2.vpce-svc-0123456789abcdef0
     validations:
       required: true
@@ -99,6 +101,7 @@ body:
     id: private-dns
     attributes:
       label: Is private DNS configured on the service?
+      description: Select Yes when the producer has configured a private DNS name on the VPC Endpoint Service. Select No otherwise.
       options:
         - "Yes"
         - "No"
