@@ -47,8 +47,8 @@ body:
     id: consumer-vpc-name
     attributes:
       label: Consumer VPC name
-      description: The name of the one consumer VPC that needs an endpoint. Optional; defaults to hosting.
-      value: hosting
+      description: The name of the one consumer VPC that needs an endpoint. Optional.
+      placeholder: hosting
     validations:
       required: false
 

@@ -55,8 +55,8 @@ body:
     id: producer-vpc-name
     attributes:
       label: Producer VPC name
-      description: The name of the VPC in the producer account that contains the resource. Optional; defaults to hosting.
-      value: hosting
+      description: The name of the VPC in the producer account that contains the resource. Optional.
+      placeholder: hosting
     validations:
       required: false
 
@@ -89,8 +89,8 @@ body:
     id: consumer-vpc-name
     attributes:
       label: Consumer VPC name
-      description: The name of the one consumer VPC that needs access to the resource. Optional; defaults to hosting.
-      value: hosting
+      description: The name of the one consumer VPC that needs access to the resource. Optional.
+      placeholder: hosting
     validations:
       required: false
 

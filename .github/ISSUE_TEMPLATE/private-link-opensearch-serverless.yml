@@ -53,8 +53,8 @@ body:
     id: consumer-vpc-name
     attributes:
       label: Consumer VPC name
-      description: The name of the VPC where the OpenSearch Serverless endpoint will be created. Optional; defaults to hosting.
-      value: hosting
+      description: The name of the VPC where the OpenSearch Serverless endpoint will be created. Optional.
+      placeholder: hosting
     validations:
       required: false
 
