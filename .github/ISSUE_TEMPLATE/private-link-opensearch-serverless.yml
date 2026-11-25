@@ -8,6 +8,13 @@ body:
       value: |
         Read the [PrivateLink Guide for Requesting Teams](https://github.com/NBCUDTC/gtvd-cloud-engineering/blob/master/docs/internal/howto/aws/private-link-requesting-team-guide.md) before completing this form.
 
+  - type: markdown
+    attributes:
+      value: |
+        ## Requester details
+
+        Complete this section when raising the request.
+
   - type: input
     id: requesting-team
     attributes:
@@ -98,7 +105,9 @@ body:
       value: |
         ---
 
-        For the assigned engineer: fill in the subnet IDs below, or leave them blank when raising the request.
+        ## Operator details (completed by the assigned engineer)
+
+        Requesting teams: leave this section blank. The assigned engineer adds the subnet IDs after picking up the request.
 
   - type: textarea
     id: consumer-subnet-ids

@@ -10,6 +10,13 @@ body:
 
         Ensure the provider resource's security group allows `198.18.0.0/15` so VPC Lattice traffic can reach it.
 
+  - type: markdown
+    attributes:
+      value: |
+        ## Requester details
+
+        Complete this section when raising the request.
+
   - type: input
     id: requesting-team
     attributes:
@@ -173,7 +180,9 @@ body:
       value: |
         ---
 
-        For the assigned engineer: fill in the subnet IDs below, or leave them blank when raising the request.
+        ## Operator details (completed by the assigned engineer)
+
+        Requesting teams: leave this section blank. The assigned engineer adds the subnet IDs after picking up the request.
 
   - type: textarea
     id: producer-subnet-ids
