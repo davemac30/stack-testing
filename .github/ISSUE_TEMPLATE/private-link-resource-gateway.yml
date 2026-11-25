@@ -13,6 +13,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        ---
+
         ### Requester details
 
         Complete this section when raising the request.
@@ -164,6 +166,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        ---
+
         ### Work Intake reference (optional)
 
         A Work Intake reference is not required to raise this issue. After review, one may be requested if the amount of effort warrants it.
